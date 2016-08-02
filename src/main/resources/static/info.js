@@ -31,7 +31,7 @@ Gerrit.install(function(self) {
 				var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(r));
 				var dlAnchorElem = document.getElementById('downloadAnchorElem');
 				dlAnchorElem.setAttribute("href", dataStr);
-				dlAnchorElem.setAttribute("download", "comments.json");
+				dlAnchorElem.setAttribute("download", "comments_"+ c.change_id + "_" + Date.now() + ".json");
 				dlAnchorElem.click();
 			}
 		  //var url = "http://"+GerritServer.getLocalHost().getHostName()+":8080/changes/" + //c._number+"/comments";
