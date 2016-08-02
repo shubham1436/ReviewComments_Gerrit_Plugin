@@ -28,7 +28,7 @@ Gerrit.install(function(self) {
            + "/comments";
 		Gerrit.get(url, function(r) {
 			if (r != null) {
-				var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(r));
+				var dataStr = "data:text/json;charset=utf-8," + r;
 				var dlAnchorElem = document.getElementById('downloadAnchorElem');
 				dlAnchorElem.setAttribute("href", dataStr);
 				dlAnchorElem.setAttribute("download", "comments.json");
